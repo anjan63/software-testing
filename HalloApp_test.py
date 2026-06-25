@@ -20,9 +20,7 @@ class LoginTest(unittest.TestCase):
     def test_login_and_click(self):
         driver = self.driver
 
-         # Define the login credentials
-        # username = 'anjanp818@gmail.com'
-        # password = 'Anjan@#123'
+         
 
         self.tc_executed += 1  # Increment the executed test cases
 
@@ -36,7 +34,7 @@ class LoginTest(unittest.TestCase):
 
         # Explicit wait for the password field to be visible and interactable
         password_field = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[2]/div/div[1]/div/div/div[2]/div/div[2]/div[2]/div/div/input')))
-        password_field.send_keys('Anjan@#123')
+        password_field.send_keys('******')
 
         # Explicit wait for the button to be visible and interactable
         button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[1]/div/div/div[2]/div/div[2]/div[4]/button/span[1]')))
@@ -46,11 +44,11 @@ class LoginTest(unittest.TestCase):
         time.sleep(2)
         driver.refresh()
         username_field = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="outlined-number"]')))
-        username_field.send_keys('anjanp818@gmail.com')
+        username_field.send_keys('*******')
 
         # Explicit wait for the password field to be visible and interactable
         password_field = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[2]/div/div[1]/div/div/div[2]/div/div[2]/div[2]/div/div/input')))
-        password_field.send_keys('Anjan@#123')
+        password_field.send_keys('********')
 
         # Explicit wait for the button to be visible and interactable
         button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[1]/div/div/div[2]/div/div[2]/div[4]/button/span[1]')))
